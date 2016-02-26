@@ -1,0 +1,73 @@
+#! /usr/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision - 11;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x17cdf40 .scope module, "fa_tb" "fa_tb" 2 3;
+ .timescale -9 -11;
+v0x17e0040_0 .var "test_a", 0 0;
+v0x17e00e0_0 .var "test_b", 0 0;
+v0x17e0190_0 .var "test_cin", 0 0;
+v0x17e0240_0 .net "test_cout", 0 0, L_0x17e0710; 1 drivers
+v0x17e0320_0 .net "test_sum", 0 0, L_0x17e0500; 1 drivers
+S_0x17ce030 .scope module, "full_adder" "fa" 2 9, 3 2, S_0x17cdf40;
+ .timescale -9 -11;
+L_0x17e03d0 .functor XOR 1, v0x17e0040_0, v0x17e00e0_0, C4<0>, C4<0>;
+L_0x17e0500 .functor XOR 1, L_0x17e03d0, v0x17e0190_0, C4<0>, C4<0>;
+L_0x17e0650 .functor AND 1, L_0x17e03d0, v0x17e0190_0, C4<1>, C4<1>;
+L_0x17e06b0 .functor AND 1, v0x17e0040_0, v0x17e00e0_0, C4<1>, C4<1>;
+L_0x17e0710 .functor OR 1, L_0x17e0650, L_0x17e06b0, C4<0>, C4<0>;
+v0x17a7db0_0 .net "a", 0 0, v0x17e0040_0; 1 drivers
+v0x17dfb40_0 .net "a_and_b", 0 0, L_0x17e06b0; 1 drivers
+v0x17dfbe0_0 .net "a_xor_b", 0 0, L_0x17e03d0; 1 drivers
+v0x17dfc80_0 .net "b", 0 0, v0x17e00e0_0; 1 drivers
+v0x17dfd30_0 .net "cin", 0 0, v0x17e0190_0; 1 drivers
+v0x17dfdd0_0 .alias "cout", 0 0, v0x17e0240_0;
+v0x17dfeb0_0 .alias "sum", 0 0, v0x17e0320_0;
+v0x17dff50_0 .net "z_and_c", 0 0, L_0x17e0650; 1 drivers
+    .scope S_0x17cdf40;
+T_0 ;
+    %vpi_call 2 14 "$monitor", "tiempo=%0d cin=%b a=%b b=%b cout=%b sum=%b", $time, v0x17e0190_0, v0x17e0040_0, v0x17e00e0_0, v0x17e0240_0, v0x17e0320_0;
+    %vpi_call 2 15 "$dumpfile", "fa.vcd";
+    %vpi_call 2 16 "$dumpvars";
+    %set/v v0x17e0190_0, 0, 1;
+    %set/v v0x17e0040_0, 0, 1;
+    %set/v v0x17e00e0_0, 0, 1;
+    %delay 2000, 0;
+    %set/v v0x17e0190_0, 0, 1;
+    %set/v v0x17e0040_0, 0, 1;
+    %set/v v0x17e00e0_0, 1, 1;
+    %delay 2000, 0;
+    %set/v v0x17e0190_0, 0, 1;
+    %set/v v0x17e0040_0, 1, 1;
+    %set/v v0x17e00e0_0, 0, 1;
+    %delay 2000, 0;
+    %set/v v0x17e0190_0, 0, 1;
+    %set/v v0x17e0040_0, 1, 1;
+    %set/v v0x17e00e0_0, 1, 1;
+    %delay 2000, 0;
+    %set/v v0x17e0190_0, 1, 1;
+    %set/v v0x17e0040_0, 0, 1;
+    %set/v v0x17e00e0_0, 0, 1;
+    %delay 2000, 0;
+    %set/v v0x17e0190_0, 1, 1;
+    %set/v v0x17e0040_0, 0, 1;
+    %set/v v0x17e00e0_0, 1, 1;
+    %delay 2000, 0;
+    %set/v v0x17e0190_0, 1, 1;
+    %set/v v0x17e0040_0, 1, 1;
+    %set/v v0x17e00e0_0, 0, 1;
+    %delay 2000, 0;
+    %set/v v0x17e0190_0, 1, 1;
+    %set/v v0x17e0040_0, 1, 1;
+    %set/v v0x17e00e0_0, 1, 1;
+    %vpi_call 2 58 "$finish";
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "fa_tb.v";
+    "fa.v";

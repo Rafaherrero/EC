@@ -1,0 +1,307 @@
+$date
+	Tue Nov 18 19:49:16 2014
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	10ps
+$end
+$scope module microc_tb $end
+$var wire 6 ! test_opcode [5:0] $end
+$var wire 1 " test_z $end
+$var reg 1 # test_clk $end
+$var reg 3 $ test_op [2:0] $end
+$var reg 1 % test_reset $end
+$var reg 1 & test_s_inc $end
+$var reg 1 ' test_s_inm $end
+$var reg 1 ( test_we3 $end
+$scope module mc $end
+$var wire 1 ) clk $end
+$var wire 16 * mi_ [15:0] $end
+$var wire 3 + op [2:0] $end
+$var wire 6 , opcode [5:0] $end
+$var wire 10 - pc_1 [9:0] $end
+$var wire 10 . pc_2 [9:0] $end
+$var wire 8 / rd_1 [7:0] $end
+$var wire 8 0 rd_2 [7:0] $end
+$var wire 1 1 reset $end
+$var wire 8 2 s_alu [7:0] $end
+$var wire 1 3 s_inc $end
+$var wire 1 4 s_inm $end
+$var wire 10 5 sums_ [9:0] $end
+$var wire 8 6 wd_3 [7:0] $end
+$var wire 1 7 we3 $end
+$var wire 1 " z $end
+$scope module sumador $end
+$var wire 10 8 a [9:0] $end
+$var wire 10 9 b [9:0] $end
+$var wire 10 : y [9:0] $end
+$upscope $end
+$scope module muxpc $end
+$var wire 10 ; d0 [9:0] $end
+$var wire 10 < d1 [9:0] $end
+$var wire 1 3 s $end
+$var wire 10 = y [9:0] $end
+$upscope $end
+$scope module muxbanco $end
+$var wire 8 > d0 [7:0] $end
+$var wire 8 ? d1 [7:0] $end
+$var wire 1 4 s $end
+$var wire 8 @ y [7:0] $end
+$upscope $end
+$scope module pc $end
+$var wire 1 ) clk $end
+$var wire 10 A d [9:0] $end
+$var wire 1 1 reset $end
+$var reg 10 B q [9:0] $end
+$upscope $end
+$scope module meminst $end
+$var wire 10 C a [9:0] $end
+$var wire 1 ) clk $end
+$var wire 16 D rd [15:0] $end
+$upscope $end
+$scope module banco $end
+$var wire 1 ) clk $end
+$var wire 4 E ra1 [3:0] $end
+$var wire 4 F ra2 [3:0] $end
+$var wire 8 G rd1 [7:0] $end
+$var wire 8 H rd2 [7:0] $end
+$var wire 4 I wa3 [3:0] $end
+$var wire 8 J wd3 [7:0] $end
+$var wire 1 7 we3 $end
+$upscope $end
+$scope module alu_ $end
+$var wire 8 K a [7:0] $end
+$var wire 8 L b [7:0] $end
+$var wire 3 M op [2:0] $end
+$var wire 8 N y [7:0] $end
+$var wire 1 " zero $end
+$var reg 8 O s [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx O
+bx N
+bx M
+b0 L
+b0 K
+bx J
+b0 I
+b0 H
+b0 G
+b10 F
+b1000 E
+b1010000000 D
+b0 C
+b0 B
+b0x0xx A
+bx @
+b101000 ?
+bx >
+b0x0xx =
+b1 <
+b1010 ;
+b1 :
+b0 9
+b1 8
+x7
+bx 6
+b1 5
+x4
+x3
+bx 2
+11
+b0 0
+b0 /
+b0 .
+b0x0xx -
+bz ,
+bx +
+b1010000000 *
+1)
+x(
+x'
+x&
+1%
+bx $
+1#
+x"
+bz !
+$end
+#500
+0%
+01
+#1000
+1"
+b0 6
+b0 @
+b0 J
+b0 O
+b0 2
+b0 >
+b0 N
+b1010 -
+b1010 =
+b1010 A
+0(
+07
+b0 $
+b0 +
+b0 M
+0'
+04
+0&
+03
+0#
+0)
+#2000
+b11000110 -
+b11000110 =
+b11000110 A
+b11 I
+b1 F
+b1001 E
+b11001 ?
+b11000110 ;
+b1010 B
+b11000110010000 *
+b11000110010000 D
+b1011 5
+b1011 :
+b1011 <
+b1010 .
+b1010 9
+b1010 C
+1#
+1)
+#3000
+b11001 6
+b11001 @
+b11001 J
+b1011 -
+b1011 =
+b1011 A
+0#
+0)
+1(
+17
+1'
+14
+1&
+13
+#4000
+0"
+b11001 O
+b11001 2
+b11001 >
+b11001 N
+b11001 /
+b11001 G
+b11001 K
+b11 6
+b11 @
+b11 J
+b110 I
+b0 F
+b11 E
+b11 ?
+b110000000 ;
+b1100 -
+b1100 =
+b1100 A
+b1011 B
+b110000000110000 *
+b110000000110000 D
+b1100 5
+b1100 :
+b1100 <
+b1011 .
+b1011 9
+b1011 C
+1#
+1)
+#5000
+b11001 6
+b11001 @
+b11001 J
+0#
+0)
+b101 $
+b101 +
+b101 M
+0'
+04
+#6000
+1"
+b0 6
+b0 @
+b0 J
+b0 O
+b0 2
+b0 >
+b0 N
+b0 /
+b0 G
+b0 K
+b0 I
+b0 E
+b0 ?
+b0 ;
+b1101 -
+b1101 =
+b1101 A
+b1100 B
+b0 *
+b0 D
+b1101 5
+b1101 :
+b1101 <
+b1100 .
+b1100 9
+b1100 C
+1#
+1)
+#7000
+0#
+0)
+#8000
+b1 I
+b1000000 ;
+b1110 -
+b1110 =
+b1110 A
+b1101 B
+b1000000000000 *
+b1000000000000 D
+b1110 5
+b1110 :
+b1110 <
+b1101 .
+b1101 9
+b1101 C
+1#
+1)
+#9000
+0#
+0)
+#10000
+b0 I
+b0 ;
+b1111 -
+b1111 =
+b1111 A
+b1110 B
+b0 *
+b0 D
+b1111 5
+b1111 :
+b1111 <
+b1110 .
+b1110 9
+b1110 C
+1#
+1)

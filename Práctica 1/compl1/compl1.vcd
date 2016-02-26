@@ -1,0 +1,47 @@
+$date
+	Sun Nov  9 19:06:42 2014
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	10ps
+$end
+$scope module compl1_tb $end
+$var wire 4 ! test_out [3:0] $end
+$var reg 4 " test_a [3:0] $end
+$var reg 1 # test_s $end
+$scope module complementador_1 $end
+$var wire 4 $ Ent [3:0] $end
+$var wire 4 % Sal [3:0] $end
+$var wire 1 & cpl $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0&
+b1 %
+b1 $
+0#
+b1 "
+b1 !
+$end
+#2000
+b100 !
+b100 %
+b100 "
+b100 $
+#4000
+b1110 !
+b1110 %
+b1 "
+b1 $
+1#
+1&
+#6000
+b1011 !
+b1011 %
+b100 "
+b100 $
+#8000

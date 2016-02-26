@@ -1,0 +1,370 @@
+$date
+	Sun Nov  9 21:56:19 2014
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	10ps
+$end
+$scope module mux4_1_tb $end
+$var wire 1 ! test_c_out $end
+$var wire 1 " test_out $end
+$var reg 1 # test_a $end
+$var reg 1 $ test_b $end
+$var reg 1 % test_c_in $end
+$var reg 1 & test_l $end
+$var reg 2 ' test_s [1:0] $end
+$scope module cal0 $end
+$var wire 1 ( a $end
+$var wire 1 ) b $end
+$var wire 1 * c_in $end
+$var wire 1 ! c_out $end
+$var wire 1 + cl_output $end
+$var wire 1 , fa_output $end
+$var wire 1 - l $end
+$var wire 1 " out $end
+$var wire 2 . s [1:0] $end
+$scope module cl0 $end
+$var wire 1 ( a $end
+$var wire 1 / a0o $end
+$var wire 1 ) b $end
+$var wire 1 0 n0o $end
+$var wire 1 1 o0o $end
+$var wire 1 + out $end
+$var wire 2 2 s [1:0] $end
+$var wire 1 3 x0o $end
+$scope module multiplexor4_1 $end
+$var wire 1 / a $end
+$var wire 1 4 a0o $end
+$var wire 1 5 a1o $end
+$var wire 1 6 a2o $end
+$var wire 1 7 a3o $end
+$var wire 1 1 b $end
+$var wire 1 3 c $end
+$var wire 1 0 d $end
+$var wire 1 8 n0o $end
+$var wire 1 9 n1o $end
+$var wire 1 + out $end
+$var wire 2 : s [1:0] $end
+$upscope $end
+$upscope $end
+$scope module fa0 $end
+$var wire 1 ( a $end
+$var wire 1 ; a_and_b $end
+$var wire 1 < a_xor_b $end
+$var wire 1 ) b $end
+$var wire 1 * cin $end
+$var wire 1 ! cout $end
+$var wire 1 , sum $end
+$var wire 1 = z_and_c $end
+$upscope $end
+$scope module mux2_10 $end
+$var wire 1 , a $end
+$var wire 1 + b $end
+$var wire 1 " out $end
+$var wire 1 - s $end
+$var wire 1 > s_n $end
+$var wire 1 ? sa $end
+$var wire 1 @ sb $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0@
+0?
+1>
+0=
+0<
+0;
+b0 :
+19
+18
+07
+06
+05
+04
+03
+b0 2
+01
+10
+0/
+b0 .
+0-
+0,
+0+
+0*
+0)
+0(
+b0 '
+0&
+0%
+0$
+0#
+0"
+0!
+$end
+#2000
+1"
+1?
+1,
+11
+13
+00
+1<
+1#
+1(
+#4000
+10
+1$
+1)
+0#
+0(
+#6000
+0"
+1+
+0?
+14
+0,
+1!
+1/
+03
+00
+0<
+1;
+1#
+1(
+#8000
+1"
+0+
+1?
+04
+0!
+1,
+0/
+01
+10
+0;
+1%
+1*
+0$
+0)
+0#
+0(
+#10000
+0"
+0?
+1!
+0,
+1=
+11
+13
+00
+1<
+1#
+1(
+#12000
+10
+1$
+1)
+0#
+0(
+#14000
+0!
+0=
+0>
+01
+03
+0<
+0%
+0*
+1&
+1-
+0$
+0)
+0#
+0(
+#16000
+1,
+11
+13
+00
+1<
+1#
+1(
+#18000
+10
+1$
+1)
+0#
+0(
+#20000
+1"
+1@
+1+
+14
+0,
+1!
+1/
+03
+00
+0<
+1;
+1#
+1(
+#22000
+0"
+0@
+0+
+04
+0!
+08
+0/
+01
+10
+0;
+0$
+0)
+0#
+0(
+b1 '
+b1 .
+b1 2
+b1 :
+#24000
+1"
+1@
+1+
+15
+1,
+11
+13
+00
+1<
+1#
+1(
+#26000
+10
+1$
+1)
+0#
+0(
+#28000
+0,
+1!
+1/
+03
+00
+0<
+1;
+1#
+1(
+#30000
+0"
+0@
+0+
+0!
+18
+09
+05
+0/
+01
+10
+0;
+0$
+0)
+0#
+0(
+b10 '
+b10 .
+b10 2
+b10 :
+#32000
+1"
+1@
+1+
+16
+1,
+11
+13
+00
+1<
+1#
+1(
+#34000
+10
+1$
+1)
+0#
+0(
+#36000
+0"
+0@
+0+
+06
+0,
+1!
+1/
+03
+00
+0<
+1;
+1#
+1(
+#38000
+1"
+1@
+1+
+0!
+08
+17
+0/
+01
+10
+0;
+0$
+0)
+0#
+0(
+b11 '
+b11 .
+b11 2
+b11 :
+#40000
+0"
+0@
+0+
+07
+1,
+11
+13
+00
+1<
+1#
+1(
+#42000
+1"
+1@
+1+
+17
+10
+1$
+1)
+0#
+0(
+#44000
+0"
+0@
+0+
+07
+0,
+1!
+1/
+03
+00
+0<
+1;
+1#
+1(

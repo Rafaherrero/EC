@@ -1,0 +1,81 @@
+#! /usr/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision - 11;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x23fcf90 .scope module, "mux2_1_tb" "mux2_1_tb" 2 3;
+ .timescale -9 -11;
+v0x2411650_0 .var "test_a", 0 0;
+v0x24116d0_0 .var "test_b", 0 0;
+v0x2411750_0 .var "test_c", 0 0;
+v0x2411800_0 .var "test_d", 0 0;
+v0x24118e0_0 .net "test_out", 0 0, L_0x2412580; 1 drivers
+v0x2411990_0 .var "test_s", 1 0;
+S_0x23fd080 .scope module, "multiplexor4_1" "mux4_1" 2 10, 3 2, S_0x23fcf90;
+ .timescale -9 -11;
+L_0x2410f50 .functor NOT 1, L_0x2411a70, C4<0>, C4<0>, C4<0>;
+L_0x2411b60 .functor NOT 1, L_0x2411bc0, C4<0>, C4<0>, C4<0>;
+L_0x2411cb0 .functor AND 1, v0x2411650_0, L_0x2411b60, L_0x2410f50, C4<1>;
+L_0x2411e30 .functor AND 1, v0x24116d0_0, L_0x2411b60, L_0x2411ee0, C4<1>;
+L_0x2412060 .functor AND 1, v0x2411750_0, L_0x24120f0, L_0x2410f50, C4<1>;
+L_0x24121e0 .functor AND 1, v0x2411800_0, L_0x2412360, L_0x2412450, C4<1>;
+L_0x2412580 .functor OR 1, L_0x2411cb0, L_0x2411e30, L_0x2412060, L_0x24121e0;
+v0x23fdbc0_0 .net *"_s1", 0 0, L_0x2411a70; 1 drivers
+v0x2410930_0 .net *"_s11", 0 0, L_0x2412450; 1 drivers
+v0x24109d0_0 .net *"_s3", 0 0, L_0x2411bc0; 1 drivers
+v0x2410a70_0 .net *"_s5", 0 0, L_0x2411ee0; 1 drivers
+v0x2410b20_0 .net *"_s7", 0 0, L_0x24120f0; 1 drivers
+v0x2410bc0_0 .net *"_s9", 0 0, L_0x2412360; 1 drivers
+v0x2410ca0_0 .net "a", 0 0, v0x2411650_0; 1 drivers
+v0x2410d40_0 .net "a0o", 0 0, L_0x2411cb0; 1 drivers
+v0x2410e30_0 .net "a1o", 0 0, L_0x2411e30; 1 drivers
+v0x2410ed0_0 .net "a2o", 0 0, L_0x2412060; 1 drivers
+v0x2410fd0_0 .net "a3o", 0 0, L_0x24121e0; 1 drivers
+v0x2411070_0 .net "b", 0 0, v0x24116d0_0; 1 drivers
+v0x2411180_0 .net "c", 0 0, v0x2411750_0; 1 drivers
+v0x2411220_0 .net "d", 0 0, v0x2411800_0; 1 drivers
+v0x2411340_0 .net "n0o", 0 0, L_0x2410f50; 1 drivers
+v0x24113e0_0 .net "n1o", 0 0, L_0x2411b60; 1 drivers
+v0x24112a0_0 .alias "out", 0 0, v0x24118e0_0;
+v0x2411530_0 .net "s", 1 0, v0x2411990_0; 1 drivers
+L_0x2411a70 .part v0x2411990_0, 0, 1;
+L_0x2411bc0 .part v0x2411990_0, 1, 1;
+L_0x2411ee0 .part v0x2411990_0, 0, 1;
+L_0x24120f0 .part v0x2411990_0, 1, 1;
+L_0x2412360 .part v0x2411990_0, 1, 1;
+L_0x2412450 .part v0x2411990_0, 0, 1;
+    .scope S_0x23fcf90;
+T_0 ;
+    %vpi_call 2 15 "$monitor", "tiempo=%0d s=%b a=%b b=%b c=%b d=%b out=%b", $time, v0x2411990_0, v0x2411650_0, v0x24116d0_0, v0x2411750_0, v0x2411800_0, v0x24118e0_0;
+    %vpi_call 2 16 "$dumpfile", "mux4_1.vcd";
+    %vpi_call 2 17 "$dumpvars";
+    %movi 8, 1, 2;
+    %set/v v0x2411990_0, 8, 2;
+    %set/v v0x2411650_0, 0, 1;
+    %set/v v0x24116d0_0, 1, 1;
+    %set/v v0x2411750_0, 0, 1;
+    %set/v v0x2411800_0, 0, 1;
+    %delay 2000, 0;
+    %movi 8, 1, 2;
+    %set/v v0x2411990_0, 8, 2;
+    %set/v v0x2411650_0, 1, 1;
+    %set/v v0x24116d0_0, 0, 1;
+    %set/v v0x2411750_0, 1, 1;
+    %set/v v0x2411800_0, 1, 1;
+    %delay 2000, 0;
+    %movi 8, 2, 2;
+    %set/v v0x2411990_0, 8, 2;
+    %set/v v0x2411650_0, 1, 1;
+    %set/v v0x24116d0_0, 0, 1;
+    %set/v v0x2411750_0, 1, 1;
+    %set/v v0x2411800_0, 1, 1;
+    %vpi_call 2 40 "$finish";
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "mux4_1_tb.v";
+    "mux4_1.v";

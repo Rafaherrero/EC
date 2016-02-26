@@ -1,0 +1,191 @@
+$date
+	Sun Nov  9 03:28:49 2014
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	10ps
+$end
+$scope module mux2_1_tb $end
+$var wire 1 ! test_out $end
+$var reg 1 " test_a $end
+$var reg 1 # test_b $end
+$var reg 2 $ test_s [1:0] $end
+$scope module celda_logica $end
+$var wire 1 % a $end
+$var wire 1 & a0o $end
+$var wire 1 ' b $end
+$var wire 1 ( n0o $end
+$var wire 1 ) o0o $end
+$var wire 1 ! out $end
+$var wire 2 * s [1:0] $end
+$var wire 1 + x0o $end
+$scope module multiplexor4_1 $end
+$var wire 1 & a $end
+$var wire 1 , a0o $end
+$var wire 1 - a1o $end
+$var wire 1 . a2o $end
+$var wire 1 / a3o $end
+$var wire 1 ) b $end
+$var wire 1 + c $end
+$var wire 1 ( d $end
+$var wire 1 0 n0o $end
+$var wire 1 1 n1o $end
+$var wire 1 ! out $end
+$var wire 2 2 s [1:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 2
+11
+10
+0/
+0.
+0-
+0,
+0+
+b0 *
+0)
+1(
+0'
+0&
+0%
+b0 $
+0#
+0"
+0!
+$end
+#2000
+1)
+1+
+0(
+1"
+1%
+#4000
+1(
+1#
+1'
+0"
+0%
+#6000
+1!
+1,
+1&
+0+
+0(
+1"
+1%
+#8000
+0!
+0,
+00
+0&
+0)
+1(
+0#
+0'
+0"
+0%
+b1 $
+b1 *
+b1 2
+#10000
+1!
+1-
+1)
+1+
+0(
+1"
+1%
+#12000
+1(
+1#
+1'
+0"
+0%
+#14000
+1&
+0+
+0(
+1"
+1%
+#16000
+0!
+10
+01
+0-
+0&
+0)
+1(
+0#
+0'
+0"
+0%
+b10 $
+b10 *
+b10 2
+#18000
+1!
+1.
+1)
+1+
+0(
+1"
+1%
+#20000
+1(
+1#
+1'
+0"
+0%
+#22000
+0!
+0.
+1&
+0+
+0(
+1"
+1%
+#24000
+1!
+00
+1/
+0&
+0)
+1(
+0#
+0'
+0"
+0%
+b11 $
+b11 *
+b11 2
+#26000
+0!
+0/
+1)
+1+
+0(
+1"
+1%
+#28000
+1!
+1/
+1(
+1#
+1'
+0"
+0%
+#30000
+0!
+0/
+1&
+0+
+0(
+1"
+1%
+#32000

@@ -1,0 +1,70 @@
+#! /usr/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision - 11;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x2152d60 .scope module, "mux2_1_tb" "mux2_1_tb" 2 3;
+ .timescale -9 -11;
+v0x2164460_0 .var "test_a", 0 0;
+v0x2164500_0 .var "test_b", 0 0;
+v0x21645b0_0 .net "test_out", 0 0, L_0x21649d0; 1 drivers
+v0x2164660_0 .var "test_s", 0 0;
+S_0x2152e50 .scope module, "multiplexor2_1" "mux2_1" 2 9, 3 2, S_0x2152d60;
+ .timescale -9 -11;
+L_0x2164740 .functor NOT 1, v0x2164660_0, C4<0>, C4<0>, C4<0>;
+L_0x2164820 .functor AND 1, v0x2164460_0, L_0x2164740, C4<1>, C4<1>;
+L_0x2164920 .functor AND 1, v0x2164500_0, v0x2164660_0, C4<1>, C4<1>;
+L_0x21649d0 .functor OR 1, L_0x2164820, L_0x2164920, C4<0>, C4<0>;
+v0x213f410_0 .net "a", 0 0, v0x2164460_0; 1 drivers
+v0x2164050_0 .net "b", 0 0, v0x2164500_0; 1 drivers
+v0x21640f0_0 .alias "out", 0 0, v0x21645b0_0;
+v0x2164190_0 .net "s", 0 0, v0x2164660_0; 1 drivers
+v0x2164240_0 .net "s_n", 0 0, L_0x2164740; 1 drivers
+v0x21642e0_0 .net "sa", 0 0, L_0x2164820; 1 drivers
+v0x21643c0_0 .net "sb", 0 0, L_0x2164920; 1 drivers
+    .scope S_0x2152d60;
+T_0 ;
+    %vpi_call 2 14 "$monitor", "tiempo=%0d s=%b a=%b b=%b out=%b", $time, v0x2164660_0, v0x2164460_0, v0x2164500_0, v0x21645b0_0;
+    %vpi_call 2 15 "$dumpfile", "mux2_1.vcd";
+    %vpi_call 2 16 "$dumpvars";
+    %set/v v0x2164660_0, 0, 1;
+    %set/v v0x2164460_0, 0, 1;
+    %set/v v0x2164500_0, 0, 1;
+    %delay 2000, 0;
+    %set/v v0x2164660_0, 0, 1;
+    %set/v v0x2164460_0, 0, 1;
+    %set/v v0x2164500_0, 1, 1;
+    %delay 2000, 0;
+    %set/v v0x2164660_0, 0, 1;
+    %set/v v0x2164460_0, 1, 1;
+    %set/v v0x2164500_0, 0, 1;
+    %delay 2000, 0;
+    %set/v v0x2164660_0, 0, 1;
+    %set/v v0x2164460_0, 1, 1;
+    %set/v v0x2164500_0, 1, 1;
+    %delay 2000, 0;
+    %set/v v0x2164660_0, 1, 1;
+    %set/v v0x2164460_0, 0, 1;
+    %set/v v0x2164500_0, 0, 1;
+    %delay 2000, 0;
+    %set/v v0x2164660_0, 1, 1;
+    %set/v v0x2164460_0, 0, 1;
+    %set/v v0x2164500_0, 1, 1;
+    %delay 2000, 0;
+    %set/v v0x2164660_0, 1, 1;
+    %set/v v0x2164460_0, 1, 1;
+    %set/v v0x2164500_0, 0, 1;
+    %delay 2000, 0;
+    %set/v v0x2164660_0, 1, 1;
+    %set/v v0x2164460_0, 1, 1;
+    %set/v v0x2164500_0, 1, 1;
+    %vpi_call 2 58 "$finish";
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "mux2_1_tb.v";
+    "mux2_1.v";
